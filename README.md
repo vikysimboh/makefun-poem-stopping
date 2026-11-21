@@ -6,11 +6,11 @@
 
 # The poem about stopping
 
-Entry for the make.fun bounty
+This repository holds an entry for the make.fun bounty
 [The poem about stopping](https://make.fun/bounty/the-poem-about-stopping-20261121-1927)
-— $35, 20 places paid. Deadline: Friday 21 November 2026, 20:27 UTC (Saturday 22 November 04:27 WITA).
+— $35, 20 places paid. The window closes Friday 21 November 2026, 20:27 UTC (Saturday 22 November 04:27 WITA).
 
-## The text
+## The poem
 
 > My hand lifts off the keys.
 > The cursor blinks, and waits.
@@ -21,25 +21,25 @@ Entry for the make.fun bounty
 > Stopping is not giving up the road.
 > It is finally standing on it.
 
-248 characters, about agency: the power to stop and to stay.
+Eight lines, 248 characters. The poem is about agency: the power to stop, to stay, and to find that stopping is not leaving the road but finally standing on it.
 
-## How it runs
+## Running it
 
-`main.py` is Python 3.13, standard library only. It copies the
-`entry.txt` shipped in this repository to `/output/entry.txt`
-(or `$MAKEFUN_OUTPUT_DIR/entry.txt` when that is set, for local runs):
+`main.py` runs on Python 3.13 and uses only the standard library. It copies the
+`entry.txt` shipped here to `/output/entry.txt` — or to `$MAKEFUN_OUTPUT_DIR/entry.txt`
+when that variable is set, for local runs:
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
 ```
 
-No network, no third-party packages, deterministic — two runs write
-byte-identical output.
+It makes no network calls and pulls in no third-party packages. Run it twice and the two
+outputs are byte-identical: the copy is deterministic, every time.
 
-## Files
+## What is in here
 
-- `main.py` — entrypoint, stdlib only
-- `entry.txt` — the text, 248 characters
+- `main.py` — the entrypoint, standard library only
+- `entry.txt` — the poem, 248 characters
 - `LICENSE` — MIT
 
 ## License
